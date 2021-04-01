@@ -1,3 +1,16 @@
+
+/* ===== Basic Settings ===== */
+
+/* Testing */
+:root {
+  --primary-text: #000;
+  --secondary-text: #555;
+  --highlight-text: #f00;
+  --primary-background: #fff;
+  --secondary-background: #aaa;
+  --highlight-background: #99f;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -9,20 +22,73 @@ body{
   align-items: center;
 }
 
+a{
+  text-decoration: none;
+  color: var(--primary-text);
+  transition: .3s all;
+}
+
+a:hover{
+  color: var(--highlight-text);
+  transition: .3s all;
+}
+
+ul{
+  list-style-type: none;
+}
+
+/* ===== Mobile Nav Bar ===== */
+
 .mobileNavBarDiv{
   position: fixed;
-  top: 1vw;
-  left: 1vw;
   background-color: white; /* Testing */
 }
 
+/* ----- Arrow -----*/
+
 .mobileNavBarDiv .fa-arrow-right{
-  font-size: 15vw;
+  position: fixed;
+  z-index: 1;
+  top: 1vw;
+  left: 1vw;
+  font-size: 13vh;
   transition: .5s all;
 }
 
 .mobileNavBarDiv .fa-arrow-right.rotated{
-  color: red;
   transform: rotate(-180deg);
   transition: .5s all;
+  left: 60vw;
+}
+
+/* ----- Menu Box ----- */
+
+.mobileMenu{
+  position: fixed;
+  height: 100vh;
+  width: 80vw;
+  overflow-y: hidden;
+  background-color: red;
+}
+
+.mobileMenu.inactive{
+  transition: .5s all;
+  top: 0;
+  left: -80vw;
+}
+
+.mobileMenu.active{
+  transition: .5s all;
+  /* background-color: red; /* Testing */
+  top: 0;
+  left: 0;
+}
+
+.mobileMenu li{
+  margin-top: 10vh;
+}
+
+.mobileMenu a{
+  font-size: 7vh;
+  margin-left: 5vw;
 }
