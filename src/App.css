@@ -109,6 +109,12 @@ ul{
   width: 100vw;
   left: 0;
   top: 2vh;
+
+  font-size: max(1.5vw, 15px);
+}
+
+.browserNavBarContainer h1{
+  font-size: max(4vw, 30px);
 }
 
 /* ===== Big Image Header ===== */
