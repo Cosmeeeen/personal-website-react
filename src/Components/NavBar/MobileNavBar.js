@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
-const MobileNavBar = () => {
+const MobileNavBar = (props) => {
 
     const [isMenuToggled, setIsMenuToggled] = useState(false);
 
@@ -10,20 +11,34 @@ const MobileNavBar = () => {
         setIsMenuToggled(!isMenuToggled);
     }
 
+    function handleCloseMenu(e){
+        if(isMenuToggled) setIsMenuToggled(false);
+    }
+
     return (
         <div className="mobileNavBarDiv">
             <i class={"fas fa-arrow-right" + (isMenuToggled ? " rotated" : "")} onClick={handleToggleMenu} ></i>
             <div className={"mobileMenu" + (isMenuToggled ? " active" : " inactive")}>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">My Work</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Mini-Apps</a></li>
+                    <li> <Link to="/" onClick={handleCloseMenu}>
+                        Home
+                    </Link> </li>
+                    <li> <Link to="/about" onClick={handleCloseMenu}>
+                        About
+                    </Link> </li>
+                    <li> <Link to="/my-work" onClick={handleCloseMenu}>
+                        My Work
+                    </Link> </li>
+                    <li> <Link to="/contact" onClick={handleCloseMenu}>
+                        Contact
+                    </Link> </li>
+                    <li> <Link to="/mini-apps" onClick={handleCloseMenu}>
+                        Mini-Apps
+                    </Link> </li>
                 </ul>
             </div>
         </div>
     );
 };
 
-export default MobileNavBar;
+export default withRouter(MobileNavBar);

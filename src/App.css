@@ -3,23 +3,24 @@
 
 /* Testing */
 :root {
-  --primary-text: #000;
-  --secondary-text: #555;
-  --highlight-text: #f00;
-  --primary-background: #fff;
-  --secondary-background: #aaa;
-  --highlight-background: #99f;
+  --primary-text: #d2dae2;
+  --secondary-text: #ffc048;
+  --highlight: #ffa801;
+  --primary-background: #1e272e;
+  --secondary-background: #485460;
 }
 
 *{
   margin: 0;
   padding: 0;
+  color: var(--primary-text);
 }
 
 body{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--primary-background);
 }
 
 a{
@@ -29,8 +30,9 @@ a{
 }
 
 a:hover{
-  color: var(--highlight-text);
+  color: var(--highlight);
   transition: .3s all;
+  text-decoration: none;
 }
 
 ul{
@@ -41,24 +43,24 @@ ul{
 
 .mobileNavBarDiv{
   position: fixed;
-  background-color: white; /* Testing */
 }
 
-/* ----- Arrow -----*/
+/* ----- Arrow ----- */
 
 .mobileNavBarDiv .fa-arrow-right{
   position: fixed;
   z-index: 1;
   top: 1vw;
   left: 1vw;
-  font-size: 13vh;
+  font-size: 10vh;
   transition: .5s all;
+  color: var(--highlight);
 }
 
 .mobileNavBarDiv .fa-arrow-right.rotated{
   transform: rotate(-180deg);
   transition: .5s all;
-  left: 60vw;
+  left: calc(80vw - 10vh);
 }
 
 /* ----- Menu Box ----- */
@@ -68,7 +70,7 @@ ul{
   height: 100vh;
   width: 80vw;
   overflow-y: hidden;
-  background-color: red;
+  background-color: var(--secondary-background);
 }
 
 .mobileMenu.inactive{
@@ -79,13 +81,16 @@ ul{
 
 .mobileMenu.active{
   transition: .5s all;
-  /* background-color: red; /* Testing */
   top: 0;
   left: 0;
 }
 
-.mobileMenu li{
+.mobileMenu ul{
   margin-top: 10vh;
+}
+
+.mobileMenu li{
+  margin-top: 3vh;
 }
 
 .mobileMenu a{
