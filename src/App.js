@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserView, MobileView } from 'react-device-detect';
 
 import PlaceholderContent from './Components/PlaceholderContent';
 import MobileNavBar from './Components/NavBar/MobileNavBar';
+import BrowserNavBar from './Components/NavBar/BrowserNavBar';
 
 import { Home, About, Contact, MiniApps, MyWork } from './Components';
 
@@ -11,7 +13,12 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <MobileNavBar />
+        <MobileView>
+          <MobileNavBar />
+        </MobileView>
+        <BrowserView>
+          <BrowserNavBar />
+        </BrowserView>
         <Switch>
           <Route path='/' exact component = {() => <Home />}></Route>
           <Route path='/about' exact component = {() => <About />}></Route>
