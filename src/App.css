@@ -119,6 +119,11 @@ ul{
   height: 100vh;
 }
 
+.bigImageHeaderContainer.mobile{
+  background-position: center;
+  background-attachment: local;
+}
+
 .bigImageHeaderContainer h1{
   font-size: 10vh;
 }
