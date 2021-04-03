@@ -177,16 +177,33 @@ ul{
 
 /* ----- Browser View ----- */
 
-.textWithImageContainer{
+.textWithImageContainer.browser{
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 2fr 1fr;
 }
 
-.textWithImageContainer img{
+.textWithImageContainer.browser img{
   width: 100%;
 }
 
-.textWithImageContainer .textComponent{
+.textWithImageContainer.browser .textComponent{
+  margin: 30px;
+}
+
+/* ----- Mobile View ----- */
+.textWithImageContainer.mobile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.textWithImageContainer.mobile img{
+  width: 100vw;
+}
+
+.textWithImageContainer.mobile .textComponent{
+  text-align: center;
   margin: 30px;
 }
