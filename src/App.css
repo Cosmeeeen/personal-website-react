@@ -172,3 +172,21 @@ ul{
 .bigImageHeaderContainer.mobile a{
   display: none;
 }
+
+/* ===== Text With Image Component ===== */
+
+/* ----- Browser View ----- */
+
+.textWithImageContainer{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 1fr;
+}
+
+.textWithImageContainer img{
+  width: 100%;
+}
+
+.textWithImageContainer .textComponent{
+  margin: 30px;
+}

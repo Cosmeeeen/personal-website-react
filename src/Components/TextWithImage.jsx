@@ -1,17 +1,14 @@
 import React from 'react';
-import { BrowserView, MobileView } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
 
 const TextWithImage = ({ image, children }) => {
 
     return (
-        <div className="textWithImageContainer">
-            <BrowserView>
+        <div className={`textWithImageContainer ${isMobile ? "mobile" : "browser"}`}>
+            <div className="textComponent">
                 {children}
-                <img src={image} />
-            </BrowserView>
-            <MobileView>
-                {children}
-            </MobileView>
+            </div>
+            <img src={image} alt="interesting thing"/>
         </div>
     );
 };
