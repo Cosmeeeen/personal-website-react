@@ -17,6 +17,10 @@ const Home = () => {
                 <h1>This is some big text</h1>
                 <p>This is some small text</p>
             </TextWithImage>
+            <TextWithImage image={ DivImage1 } align="left" >
+                <h1>This is some big text</h1>
+                <p>This is some small text</p>
+            </TextWithImage>
         </div>
     );
 };

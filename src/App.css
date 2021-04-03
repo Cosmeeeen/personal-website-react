@@ -180,15 +180,17 @@ ul{
 .textWithImageContainer.browser{
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .textWithImageContainer.browser img{
   width: 100%;
+  column-span: 1;
 }
 
 .textWithImageContainer.browser .textComponent{
   margin: 30px;
+  grid-column: auto / span 2;
 }
 
 /* ----- Mobile View ----- */
