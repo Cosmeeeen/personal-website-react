@@ -3,7 +3,7 @@ import { isMobile } from 'react-device-detect';
 
 const TextWithImage = ({ align, image, children }) => {
 
-    const isLeft = align === "left";
+    const isLeft = (align === "left" && !isMobile);
 
     const leftAlignStyle = {
         "order" : -1
