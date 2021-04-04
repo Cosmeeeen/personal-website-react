@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { BrowserView, MobileView } from 'react-device-detect';
 
-import PlaceholderContent from './Components/PlaceholderContent';
 import MobileNavBar from './Components/NavBar/MobileNavBar';
 import BrowserNavBar from './Components/NavBar/BrowserNavBar';
+import FooterElement from './Components/FooterElement';
 
 import { Home, About, Contact, MiniApps, MyWork } from './Components';
 
@@ -26,7 +26,7 @@ function App() {
           <Route path='/my-work' exact component = {() => <MyWork />}></Route>
           <Route path='/mini-apps' exact component = {() => <MiniApps />}></Route>
         </Switch>
-        <PlaceholderContent />
+        <FooterElement />
       </Router>
     </div>
   );
