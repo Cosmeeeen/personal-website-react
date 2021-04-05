@@ -4,8 +4,8 @@
 /* Testing */
 :root {
   --primary-text: #d2dae2;
-  --secondary-text: #ffc048;
-  --highlight: #ffa801;
+  --secondary-text: #3498db;
+  --highlight: #2980b9;
   --primary-background: #1e272e;
   --secondary-background: #485460;
 }
@@ -205,8 +205,11 @@ ul{
 }
 
 .textWithImageContainer p a:hover{
-  color: var(--highlight);
+  color: var(--primary-text);
   font-size: 18px;
+  background-color: var(--highlight);
+  border-radius: 10em;
+  padding: 5px;
 }
 
 /* ----- Mobile View ----- */
