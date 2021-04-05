@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BigImageHeader from '../BigImageHeader';
 import TextWithImage from '../TextWithImage.jsx';
 
@@ -14,8 +15,10 @@ const Home = () => {
                 creditLink="https://www.pexels.com/photo/grayscale-photo-of-volcano-997443/"
             />
             <TextWithImage image={ DivImage1 }>
-                <h1>This is some big text</h1>
-                <p>This is some small text</p>
+                <h1>Hello, World!</h1>
+                <p>My name is Cosmin Ilie, and I am a programmer from Romania. I am currently studying at "Babeș-Bolyai" University, Cluj-Napoca, working towards my Bachelor's Degree in Maths & Computer Science.</p>
+                <p>I am experienced in Web Development, specialising in Frontend and CMS development. Other than that, I am dipping my toes in multiple programming fields, such as automation, app development and game development.</p>
+                <p>If you want to read my complete story, you can visit the <Link to="/about-me">About Me</Link> page, or you can send me a message using any contact information from the <Link to="/contact">Contact</Link> page. You can also see the projects I worked on in the <Link to="my-work">My Work</Link> page, or use some small and fun web applications/games in the <Link to="mini-apps">Mini-Apps</Link> page.</p>
             </TextWithImage>
             <TextWithImage image={ DivImage1 } align="left" >
                 <h1>This is some big text</h1>

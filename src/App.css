@@ -184,6 +184,7 @@ ul{
 }
 
 .textWithImageContainer.browser img{
+  height: auto;
   width: 100%;
   column-span: 1;
 }
@@ -191,6 +192,10 @@ ul{
 .textWithImageContainer.browser .textComponent{
   margin: 30px;
   grid-column: auto / span 2;
+}
+
+.textWithImageContainer p{
+  text-indent: 30px;
 }
 
 /* ----- Mobile View ----- */
