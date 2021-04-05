@@ -5,10 +5,10 @@ const FooterElement = () => {
     return (
         <div className={`footerElementContainer ${isMobile ? 'mobile' : 'web'}`}>
             <div className="col 1">
-                <p>Hello world</p>
+                <p>This website was made using React</p>
             </div>
             <div className="col 2">
-                <p>This website is hosted by ASFLKJHosting</p>
+                <p>Hosting provided by [hosting_name]</p>
             </div>
             <div className="col 3">
                 <p>© Cosmin Ilie 2021</p>

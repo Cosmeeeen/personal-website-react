@@ -181,6 +181,7 @@ ul{
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
 }
 
 .textWithImageContainer.browser img{
@@ -191,11 +192,21 @@ ul{
 
 .textWithImageContainer.browser .textComponent{
   margin: 30px;
+  margin-bottom: 0;
   grid-column: auto / span 2;
 }
 
 .textWithImageContainer p{
   text-indent: 30px;
+}
+
+.textWithImageContainer p a{
+  color: var(--secondary-text);
+}
+
+.textWithImageContainer p a:hover{
+  color: var(--highlight);
+  font-size: 18px;
 }
 
 /* ----- Mobile View ----- */
@@ -215,6 +226,10 @@ ul{
   margin: 30px;
 }
 
+.textWithImageContainer img{
+  opacity: .5;
+}
+
 /* ===== Website Footer ===== */
 
 /* ----- Web View ----- */
@@ -225,6 +240,7 @@ ul{
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(3, 1fr);
+  z-index: -1;
 }
 
 .footerElementContainer.web .col{
@@ -241,8 +257,13 @@ ul{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: -1;
+
+  border-top: 2px solid var(--secondary-background);
+  padding-top: 30px;
 }
 
 .footerElementContainer.mobile .col{
   border-top: 1px solid var(--s econdary-background);
+  z-index: -1;
 }
