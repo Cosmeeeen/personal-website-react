@@ -4,8 +4,8 @@
 /* Testing */
 :root {
   --primary-text: #d2dae2;
-  --secondary-text: #3498db;
-  --highlight: #2980b9;
+  --secondary-text: #f39c12;
+  --highlight: #e67e22;
   --primary-background: #1e272e;
   --secondary-background: #485460;
 }
@@ -44,6 +44,7 @@ ul{
 
 .mobileNavBarDiv{
   position: fixed;
+  z-index: 1;
 }
 
 /* ----- Arrow ----- */
@@ -201,15 +202,11 @@ ul{
 }
 
 .textWithImageContainer p a{
-  color: var(--secondary-text);
+  color: var(--highlight);
 }
 
 .textWithImageContainer p a:hover{
-  color: var(--primary-text);
-  font-size: 18px;
-  background-color: var(--highlight);
-  border-radius: 10em;
-  padding: 5px;
+  color: var(--secondary-text);
 }
 
 /* ----- Mobile View ----- */
